@@ -36,7 +36,7 @@ const NavBer = () => {
                     </ul>
                 </div>
                 <div className="navbar-end">
-                    <a className="btn">Button</a>
+                    <a className="bg-[#1f2937] px-3 py-2 rounded text-yellow-500">Button</a>
                 </div>
             </div>
         </>
