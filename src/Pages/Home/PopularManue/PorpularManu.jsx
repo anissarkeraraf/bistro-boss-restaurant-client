@@ -1,20 +1,23 @@
 import { useEffect, useState } from "react";
 import SectionTiltle from "../../../componants/SectionTitle/SectionTiltle";
 import ManuItem from "../../Shared/ManuItem/ManuItem";
+import UseManu from "../../../componants/Hooks/UseManu";
 
 
 const PorpularManu = () => {
+    const [manu] = UseManu();
+    const popular = manu.filter(item => item.category === 'popular')
 
-    const [manu, setManu] = useState([]);
+    // const [manu, setManu] = useState([]);
 
-    useEffect(() => {
-        fetch('manu.json')
-            .then(res => res.json())
-            .then(data => {
-                const popularItem = data.filter(item => item.category === 'popular');
-                setManu(popularItem)
-            })
-    }, [])
+    // useEffect(() => {
+    //     fetch('manu.json')
+    //         .then(res => res.json())
+    //         .then(data => {
+    //             const popularItem = data.filter(item => item.category === 'popular');
+    //             setManu(popularItem)
+    //         })
+    // }, [])
 
     return (
         <div className="mb-10">
@@ -24,7 +27,7 @@ const PorpularManu = () => {
             ></SectionTiltle>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
                 {
-                    manu.map(item => <ManuItem
+                    popular.map(item => <ManuItem
                     key={item._id}
                     item={item}
                     ></ManuItem>)
