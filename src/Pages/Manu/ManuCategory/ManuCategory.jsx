@@ -2,7 +2,7 @@ import Cover from "../../Shared/Cover/Cover";
 import ManuItem from "../../Shared/ManuItem/ManuItem";
 
 
-const ManuCategory = ({ items, title, img }) => {
+const ManuCategory = ({ items, title, img, btn }) => {
     return (
         <div className="">
             {title && <Cover img={img} title={title}></Cover>}
@@ -13,6 +13,9 @@ const ManuCategory = ({ items, title, img }) => {
                         item={item}
                     ></ManuItem>)
                 }
+            </div>
+            <div className="mb-10 flex justify-center items-center">
+                {btn && <button className="uppercase p-2 rounded btn-outline border-b-2 duration-300">{btn}</button>}
             </div>
         </div>
     );

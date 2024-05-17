@@ -25,13 +25,14 @@ const Manu = () => {
             {/* Main  */}
             <SectionTiltle subHeading="Don't miss" heading="Today's Offer"></SectionTiltle>
             {/* Offerd */}
-            <ManuCategory items={offered}></ManuCategory>
+            <ManuCategory items={offered} btn='Order Your Favourit food'></ManuCategory>
 
             {/* Dessert */}
             <ManuCategory
             items={desserts}
             title='Dessert'
             img={dessertImg}
+            btn='Order Your Favourit food'
             ></ManuCategory>
 
             {/* Pizza */}
@@ -39,6 +40,7 @@ const Manu = () => {
             items={pizza}
             title="Pizza"
             img={pizzaImg}
+            btn='Order Your Favourit food'
             ></ManuCategory>
 
             {/* Salads */}
@@ -46,6 +48,7 @@ const Manu = () => {
             items={salad}
             title="salads"
             img={saladImg}
+            btn='Order Your Favourit food'
             ></ManuCategory>
 
             {/* Soup */}
@@ -53,6 +56,7 @@ const Manu = () => {
             items={soup}
             title="soups"
             img={soupImg}
+            btn='Order Your Favourit food'
             ></ManuCategory>
           
         </div>
