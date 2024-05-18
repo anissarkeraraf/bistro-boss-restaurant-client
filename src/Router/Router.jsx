@@ -4,6 +4,7 @@ import {
 import Main from "../LauOut/Main";
 import Home from "../Pages/Home/Home/Home";
 import Manu from "../Pages/Manu/Manu";
+import Order from "../Pages/Order/Order/Order";
 
 
   export const router = createBrowserRouter([
@@ -18,6 +19,10 @@ import Manu from "../Pages/Manu/Manu";
         {
           path: '/manu',
           element: <Manu></Manu>
+        },
+        {
+          path: '/order/:category',
+          element: <Order></Order>
         }
       ]
     },

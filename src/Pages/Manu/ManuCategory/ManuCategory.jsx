@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import Cover from "../../Shared/Cover/Cover";
 import ManuItem from "../../Shared/ManuItem/ManuItem";
 
@@ -15,7 +16,9 @@ const ManuCategory = ({ items, title, img, btn }) => {
                 }
             </div>
             <div className="mb-10 flex justify-center items-center">
-                {btn && <button className="uppercase p-2 rounded btn-outline border-b-2 duration-300">{btn}</button>}
+                <Link to={`/order/${title}`}>
+                    <button className="uppercase p-2 rounded btn-outline border-b-2 duration-300">{btn}</button>
+                </Link>
             </div>
         </div>
     );

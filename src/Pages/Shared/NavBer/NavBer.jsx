@@ -6,6 +6,7 @@ const NavBer = () => {
     const navList = <>
         <li><Link to='/'>Home</Link></li>
         <li><Link to='/manu'>Our Manu</Link></li>
+        <li><Link to='/order'>Order Foods</Link></li>
     </>
 
     return (
@@ -20,7 +21,7 @@ const NavBer = () => {
                             {navList}
                         </ul>
                     </div>
-                    <a className="btn btn-ghost text-xl">DISTRO BOSS</a>
+                    <a className="btn-ghost text-xl">BISTRO BOSS</a>
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1">
@@ -28,7 +29,7 @@ const NavBer = () => {
                     </ul>
                 </div>
                 <div className="navbar-end">
-                    <a className="bg-[#1f2937] px-3 py-2 rounded text-yellow-500">Button</a>
+                    <button className="bg-[#1f2937] px-3 py-2 rounded text-yellow-500">Button</button>
                 </div>
             </div>
         </>

@@ -5,7 +5,7 @@ const UseManu = () => {
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-        fetch('manu.json')
+        fetch('http://localhost:5000/manu')
             .then(res => res.json())
             .then(data => {
 

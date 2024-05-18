@@ -11,7 +11,7 @@ import ManuCategory from "./ManuCategory/ManuCategory";
 
 const Manu = () => {
     const [manu] = UseManu();
-    const desserts = manu.filter(item => item.category === 'dessert')
+    const dessert = manu.filter(item => item.category === 'dessert')
     const salad = manu.filter(item => item.category === 'salad')
     const pizza = manu.filter(item => item.category === 'pizza')
     const soup = manu.filter(item => item.category === 'soup')
@@ -29,8 +29,8 @@ const Manu = () => {
 
             {/* Dessert */}
             <ManuCategory
-            items={desserts}
-            title='Dessert'
+            items={dessert}
+            title='dessert'
             img={dessertImg}
             btn='Order Your Favourit food'
             ></ManuCategory>
@@ -38,7 +38,7 @@ const Manu = () => {
             {/* Pizza */}
             <ManuCategory
             items={pizza}
-            title="Pizza"
+            title="pizza"
             img={pizzaImg}
             btn='Order Your Favourit food'
             ></ManuCategory>
