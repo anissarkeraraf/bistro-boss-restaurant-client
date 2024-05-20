@@ -9,6 +9,7 @@ import UseManu from "../../componants/Hooks/UseManu";
 import SectionTiltle from "../../componants/SectionTitle/SectionTiltle";
 import ManuCategory from "./ManuCategory/ManuCategory";
 
+
 const Manu = () => {
     const [manu] = UseManu();
     const dessert = manu.filter(item => item.category === 'dessert')

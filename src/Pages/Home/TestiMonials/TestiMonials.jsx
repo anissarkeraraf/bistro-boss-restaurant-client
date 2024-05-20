@@ -25,7 +25,7 @@ const TestiMonials = () => {
                 heading={'Testimonials'}
             ></SectionTiltle>
 
-            <Swiper navigation={true} modules={[Navigation]} className="mySwiper">
+            <Swiper  key={reviews._id} navigation={true} modules={[Navigation]} className="mySwiper">
 
                 {
                     reviews.map(review => (
