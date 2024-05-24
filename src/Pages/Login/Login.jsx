@@ -7,10 +7,11 @@ import { AuthContext } from '../../Provider/AuthProvider';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 import Swal from 'sweetalert2';
+import SocialLogin from '../../componants/SocialLogin/SocialLogin';
 
 const Login = () => {
 
-    const { signIn, googleSignIn, } = useContext(AuthContext);
+    const { signIn } = useContext(AuthContext);
     const [disabled, setDisabled] = useState(true);
     const navigate = useNavigate();
     const location = useLocation();
@@ -54,16 +55,6 @@ const Login = () => {
         }
     }
 
-    const handleGoogleSignIn = () => {
-        googleSignIn()
-        .then(result => {
-            console.log(result.user)
-            navigate('/')
-        })
-        .catch(error => {
-            console.log(error.message)
-        })
-    }
 
     return (
         <>
@@ -102,7 +93,7 @@ const Login = () => {
                                 <button disabled={disabled} className="btn btn-primary">Login</button>
                             </div>
                             <p className='mx-auto mt-2'>New Here ?<small className='btn-link ml-2'><Link to='/signUp'>Create an account</Link></small></p>
-                            <button onClick={() => handleGoogleSignIn()} className='btn btn-secondary'>Google</button>
+                            <SocialLogin></SocialLogin>
                         </form>
                         
                     </div>

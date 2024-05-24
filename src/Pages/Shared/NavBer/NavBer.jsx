@@ -23,10 +23,10 @@ const NavBer = () => {
         <li><Link to='/order/salads'>Order Foods</Link></li>
         <li><Link to='/secret'>Secret</Link></li>
         <li>
-            <Link to='/'>
+            <Link to='/dashboard/cart'>
                 <button className="flex">
                     <FaShoppingCart className="text-2xl mr-2"></FaShoppingCart>
-                    <div className=" badge-secondary px-3 rounded-full">+{cart.length}</div>
+                    <div className=" badge-secondary px-3 rounded-full">{cart.length}</div>
                 </button>
             </Link>
         </li>
